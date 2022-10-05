@@ -1,0 +1,312 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#mf-logo {
+  display: inline-block;
+  width: 20vw;
+  min-width: 200px;
+  position: absolute;
+  left: 10px;
+  top: -2em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+nav ul li {
+  display: none;
+}
+nav ul li a {
+  color: #fb609b;
+  text-shadow: 1px 1px 2px rgb(236, 178, 250);
+}
+nav #burger-label,
+nav #burger-checkbox {
+  position: absolute;
+  right: 0.5em;
+  top: 1.5em;
+  display: inline;
+}
+nav #burger-checkbox {
+  display: none;
+}
+nav #burger-checkbox:checked + ul {
+  /*
+        they are hidden so make them
+        appear again when checkbox:checked 
+    */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 8em;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  /* 
+        and give them different styling so 
+        they are flex column and
+        also change positioning because
+        they should be under nav not inside it
+    */
+  gap: 2rem;
+  /* hint: you need position, display, and flex-direction */
+}
+nav #burger-checkbox:checked + ul li {
+  /* they are hidden so make them
+    appear again when checkbox:checked  */
+  display: initial;
+}
+nav a {
+  height: 60px;
+  line-height: 60px;
+  color: white;
+  padding: 20px;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (min-width: 488px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav #burger-label,
+nav #burger-checkbox {
+    display: none;
+  }
+  nav #mf-logo {
+    display: inline-block;
+    width: 10vw;
+    min-width: 200px;
+    position: absolute;
+    left: 2em;
+    top: 3em;
+    transition: 1s;
+  }
+  nav #mf-logo:hover {
+    transform: scale(1.2) translateX(10px);
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1.5em;
+    width: 100%;
+  }
+  nav ul li {
+    display: inline-flex;
+  }
+  nav ul li a {
+    font-size: 1.1em;
+  }
+}
+html {
+  box-sizing: border-box;
+  background-color: black;
+  scroll-behavior: smooth;
+  font-size: calc(13px + 0.5vw);
+  color: white;
+  border: 6px solid #fb609b;
+  overflow: auto;
+}
+
+.pink-letter {
+  display: inline-block;
+}
+
+.pink-letter::first-letter {
+  color: #fb609b;
+}
+
+.hello-div-parent {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+.hello-div-parent #my-pic {
+  display: inline-block;
+  object-fit: cover;
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  border: 5px dotted #fb609b;
+  margin-top: 5em;
+}
+.hello-div-parent .hello-div-child h1,
+.hello-div-parent .hello-div-child h2 {
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.hello-div-parent .hello-div-child h1 {
+  margin-bottom: 25px;
+  font-family: "League Spartan", sans-serif;
+}
+.hello-div-parent .hello-div-child h2 {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.link-sec {
+  /* position: relative; */
+  font-family: "Hind Madurai", sans-serif;
+}
+.link-sec .container {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 60vw;
+  line-height: 1.5;
+  text-align: center;
+}
+.link-sec h3 {
+  padding: 25px 0;
+  letter-spacing: 1px;
+}
+.link-sec #check {
+  display: none;
+}
+.link-sec #check:checked ~ .content {
+  display: block;
+}
+.link-sec #check:checked ~ label {
+  display: none;
+}
+.link-sec #check2 {
+  display: none;
+}
+.link-sec #check2:checked ~ .content {
+  display: block;
+}
+.link-sec #check2:checked ~ label {
+  display: none;
+}
+.link-sec #check3 {
+  display: none;
+}
+.link-sec #check3:checked ~ .content {
+  display: block;
+}
+.link-sec #check3:checked ~ label {
+  display: none;
+}
+.link-sec .content {
+  display: none;
+  transition: 0.5s linear;
+}
+.link-sec label {
+  display: inline-block;
+  margin-top: 1em;
+  color: #fb609b;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media (min-width: 488px) {
+  .hello-div-parent {
+    height: 100vh;
+    margin-top: 100px;
+    display: flex;
+    gap: 2em;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    position: relative;
+  }
+  .hello-div-parent #my-pic {
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    width: 13em;
+    height: 13em;
+    margin-top: 0;
+  }
+  .hello-div-parent .hello-div-child {
+    position: absolute;
+    bottom: 250px;
+    left: 200px;
+  }
+  .hello-div-parent .hello-div-child h1 {
+    font-size: 3rem;
+    margin-top: 100px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+  }
+  .link-sec .container {
+    text-align: start;
+  }
+  .link-sec .container:nth-child(odd) {
+    float: right;
+    clear: right;
+    margin-right: 2em;
+  }
+  .link-sec .container:nth-child(even) {
+    float: left;
+    clear: left;
+    margin-left: 2em;
+  }
+}
+#hire {
+  clear: both;
+  text-align: center;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 60vw;
+  line-height: 1.5;
+  text-align: center;
+  font-family: "Hind Madurai", sans-serif;
+}
+#hire p {
+  margin-bottom: 2em;
+  margin-left: 0.5em;
+}
+#hire img {
+  width: 38px;
+  padding: 3px;
+}
+#hire div[data-tool-tip] {
+  position: relative;
+}
+#hire div[data-tool-tip]::before {
+  content: attr(data-tool-tip);
+  display: block;
+  position: absolute;
+  background-color: var(--pink-color);
+  padding: 1em 2em;
+  color: #fb609b;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 0.6em;
+  bottom: 0;
+  left: 400px;
+  transform: scale(0);
+  transition: transform ease-out 550ms, bottom ease-out 550ms;
+}
+#hire div[data-tool-tip]:hover::before {
+  transform: scale(1);
+  bottom: 100%;
+}
+#hire .social-links img {
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=main.css.map */

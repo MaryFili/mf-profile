@@ -1,12 +1,117 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/main.scss" />
-    <title>Hello, World!</title>
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Merriweather+Sans&family=Montserrat&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.scss" />
+  <title>Mary´s Profile page</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img id="mf-logo" src="./Mary Filardi.png" alt="logo" />
+      <label for="burger-checkbox" id="burger-label">
+        <img id="burger-icon" src="burger-ic-white.png" alt="burger menu" width="50vw">
+      </label>
+      <input type="checkbox" name="burger-checkbox" id="burger-checkbox">
+      <ul>
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#project">Future Projects</a></li>
+        <li> <a href="#portfolio">Portfolio</a></li>
+        <li><a href="#hire">Hire Me!</a></li>
+      </ul>
+
+    </nav>
+  </header>
+  <main>
+    <div class="hello-div-parent">
+      <img id="my-pic" src="./IMG_20190927_155436-01.jpg" alt="profile picture" />
+      <div class="hello-div-child">
+        <h1>
+          Hello, I´m <span class="pink-letter">Mary</span>
+          <span class="pink-letter">Filardi</span>
+        </h1>
+        <h2>I´m a Web Developer based in Berlin.</h2>
+      </div>
+
+
+    </div>
+    <section class="link-sec">
+      <div class="container">
+        <input type="checkbox" id="check">
+        <h3>
+          Something <span class="pink-letter">About </span>
+          <span class="pink-letter"> Me</span>
+        </h3>
+        <p>
+          Welcome to my portfolio! I am a web developer with a background in (human) languages. In other words, I have
+          studied modern languages and translation and ended up in the wonderful world of the programming language :).
+        </p>
+        <br>
+        <div class="content">
+          I used to be a translator and, after 13 years, I found myself considering a massive career transition, that
+          led me to a 12 months Web Dev bootcamp. And here I am now, and here is where it all begins 🚀.
+        </div>
+        <label for="check">Read More</label>
+
+      </div>
+
+      <div class="container">
+        <input type="checkbox" id="check3">
+        <h3>
+          My <span class="pink-letter">Future</span>
+          <span class="pink-letter">Projects</span>
+        </h3>
+        <p>
+          Being a lifesaving web developer with expert Photoshop, HTML, and CSS3 skills....</p>
+        <div class="content">More coming soon :)</div>
+        <label for="check3">Read More</label>
+
+      </div>
+      <div class="container">
+        <input type="checkbox" id="check2">
+        <h3>Portfolio</h3>
+        <p>
+          Coming soon..</p>
+        <div class="content">....</div>
+        <label for="check2">Read More</label>
+      </div>
+    </section>
+
+    <div id="hire">
+      <h3>
+        Want to <span class="pink-letter">Hire</span>
+        <span class="pink-letter">Me?</span>
+      </h3>
+
+      <p>Let´s get in touch!</p>
+      <div class="link-yeah" data-tool-tip="YEAH!">
+        <a class="social-links" href="mailto:filardimary@gmail.com"><img src="./pink-icons 64x64/gmail.png"
+            alt="gmail icon" /></a>
+        <a class="social-links" href="https://linkedin.com"><img src="./pink-icons 64x64/linkedin.png"
+            alt="linkedin icon" /></a>
+        <a class="social-links" href="https://wa.me/01573"><img src="./pink-icons 64x64/whatsapp.png"
+            alt="Instagram" /></a>
+
+        <a class="social-links" href="https://www.twitter.com"><img src="./pink-icons 64x64/twitter.png"
+            alt="twitter icon" /></a>
+      </div>
+
+    </div>
+
+  </main>
+  <footer></footer>
+</body>
+
 </html>

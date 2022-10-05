@@ -1,0 +1,125 @@
+nav {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    ul {
+        li {
+            display: none;
+
+            a {
+                color: #fb609b;
+                text-shadow: 1px 1px 2px rgb(236, 178, 250);
+            }
+
+        }
+    }
+
+    #burger-label,
+    #burger-checkbox {
+        position: absolute;
+        right: 0.5em;
+        top: 1.5em;
+        display: inline;
+
+    }
+
+    #burger-checkbox {
+        display: none;
+
+        &:checked+ul {
+            /*
+                  they are hidden so make them
+                  appear again when checkbox:checked 
+              */
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 8em;
+            width: 100%;
+            text-align: center;
+            background-color: $primary-color;
+
+
+
+            /* 
+                  and give them different styling so 
+                  they are flex column and
+                  also change positioning because
+                  they should be under nav not inside it
+              */
+
+
+            gap: 2rem;
+
+            /* hint: you need position, display, and flex-direction */
+        }
+
+        &:checked+ul li {
+            /* they are hidden so make them
+              appear again when checkbox:checked  */
+            display: initial;
+
+        }
+
+    }
+
+    a {
+        height: 60px;
+        line-height: 60px;
+        color: white;
+        padding: 20px;
+        position: relative;
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
+
+@media (min-width: 488px) {
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+
+        #burger-label,
+        #burger-checkbox {
+            display: none;
+        }
+
+        #mf-logo {
+            display: inline-block;
+            width: 10vw;
+            min-width: 200px;
+            position: absolute;
+            left: 2em;
+            top: 3em;
+            transition: 1s;
+
+            &:hover {
+                transform: scale(1.2) translateX(10px);
+            }
+        }
+
+
+
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 1.5em;
+            width: 100%;
+
+            li {
+                display: inline-flex;
+
+                a {
+                    font-size: 1.1em
+                }
+            }
+        }
+    }
+}

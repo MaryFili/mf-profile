@@ -1,0 +1,16 @@
+#mf-logo {
+    display: inline-block;
+    width: 20vw;
+    min-width: 200px;
+    position: absolute;
+    left: 10px;
+    top: -2em;
+    transition: 1s;
+
+    &:hover {
+
+        transform: scale(1.2) translateX(10px);
+
+    }
+
+}
