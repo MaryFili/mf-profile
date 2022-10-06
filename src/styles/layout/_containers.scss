@@ -69,7 +69,7 @@ html {
     font-family: "Hind Madurai", sans-serif;
 
     .container {
-        width: 100vw;
+        width: 40em;
         margin: 0 auto;
         padding: 20px;
         max-width: 60vw;
@@ -144,7 +144,9 @@ html {
         border-radius: 20px;
     }
 
-
+    .third-label {
+        display: none;
+    }
 }
 
 
