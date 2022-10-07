@@ -3,7 +3,7 @@ html {
     background-color: $primary-color;
     scroll-behavior: smooth;
     font-size: calc(13px + 0.5vw);
-    color: white;
+    color: $text-clr-100;
     border: 6px solid $secundary-color;
     overflow: auto;
 }
@@ -45,17 +45,20 @@ html {
             text-align: center;
             padding-left: 1em;
             padding-right: 1em;
+            color: #ffffff;
         }
 
         h1 {
 
             margin-bottom: 25px;
             font-family: "League Spartan", sans-serif;
+
         }
 
 
         h2 {
             font-family: "Merriweather Sans", sans-serif;
+            letter-spacing: .2em;
         }
     }
 
